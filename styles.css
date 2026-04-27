@@ -1819,14 +1819,41 @@ body.dark-mode .about-image {
         margin: 0 auto;
     }
 
-    /* Navbar Mobile */
+    .navbar-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.98);
+        padding: 20px;
+        gap: 15px;
+        display: none; /* Hidden by default on mobile */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .navbar-menu.active {
+        display: flex; /* Shown when hamburger clicked */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+    }
+
+    .navbar-logo img {
+        height: 65px; /* Scaled down for tablet/mobile */
+    }
+
     .logo-text {
-        font-size: 18px;
+        font-size: 17px; 
         display: block !important;
+        letter-spacing: -0.2px;
+        max-width: 180px; /* Prevent it from pushing too far */
     }
 
     .navbar-container {
-        padding: 0 15px;
+        padding: 0 20px; 
     }
 
     /* General Spacing Normalize */
@@ -1877,11 +1904,20 @@ body.dark-mode .about-image {
     }
 
     .navbar-logo img {
-        height: 60px;
+        height: 55px; /* Further scaled for small phones */
+    }
+
+    .navbar-logo {
+        gap: 10px; /* Tighter gap */
     }
 
     .logo-text {
-        font-size: 14px;
+        font-size: 15px; /* Minimum legible size */
+        letter-spacing: -0.5px;
+    }
+
+    .navbar-container {
+        padding: 0 15px;
     }
 
     /* Remove horizontal scroll completely */

@@ -44,12 +44,22 @@ html {
     scroll-padding-top: 80px;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--color-dark-gray);
     background-color: var(--color-white);
     line-height: 1.6;
-    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .container {
@@ -708,22 +718,23 @@ body.dark-mode .products-grid-section {
 .about-image {
     position: relative;
     overflow: hidden;
-    border-radius: var(--radius-lg);
-    aspect-ratio: 3 / 4;
-    max-height: 500px;
+    border-radius: 24px;
+    aspect-ratio: 3 / 4; /* Classic portrait ratio */
+    max-height: 550px;
     margin: 0 auto;
     width: 100%;
-    max-width: 400px; /* Prevent it from being too wide */
+    max-width: 420px;
     animation: slideUp 1s ease forwards;
     opacity: 0;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(143, 179, 57, 0.1);
 }
 
 .about-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 10%;
+    object-position: top center; /* Ensures the top of the head is visible */
     transition: var(--transition);
 }
 
@@ -906,7 +917,7 @@ body.dark-mode .products-grid-section {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -995,7 +1006,7 @@ body.dark-mode .products-grid-section {
 
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -1738,57 +1749,84 @@ body.dark-mode .wave-separator path {
     }
 }
 
-/* ==================== FINAL RESPONSIVE POLISH ==================== */
+/* ==================== COMPREHENSIVE RESPONSIVE SYSTEM ==================== */
 
-/* Tablet & Smaller Desktop (max-width: 1024px) */
+/* --- TABLET & SMALL LAPTOPS (max-width: 1024px) --- */
 @media (max-width: 1024px) {
     .container {
-        max-width: 95%;
-        padding: 0 25px;
+        max-width: 100%;
+        padding: 0 30px;
     }
-    
+
     .hero-title {
-        font-size: 48px;
+        font-size: 42px;
     }
-    
+
     .products-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 products per row on tablet */
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
-    
+
+    /* About Section Tablet Stacking */
     .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
         gap: 40px;
+    }
+
+    .about-text {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .about-label {
+        display: block;
+        text-align: center;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .about-image {
+        max-width: 380px;
+        margin: 0 auto;
     }
 }
 
-/* Mobile Devices (max-width: 768px) */
+/* --- MOBILE DEVICES (max-width: 768px) --- */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
     .section-header {
         margin-bottom: 30px;
         text-align: center;
     }
 
     .section-header h2 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
-    /* Hero Section Stacking */
+    /* Hero Stacking */
     .hero-split .hero-container {
-        display: flex;
         flex-direction: column-reverse;
-        text-align: center;
         padding-top: 100px;
-        padding-bottom: 60px;
+        padding-bottom: 40px;
+        text-align: center;
     }
 
     .hero-text-content {
         max-width: 100%;
-        margin-top: 40px;
+        margin-top: 30px;
     }
 
     .hero-title {
-        font-size: 36px;
-        margin-bottom: 20px;
+        font-size: 30px;
+        line-height: 1.2;
     }
 
     .hero-highlight-modern {
@@ -1796,105 +1834,129 @@ body.dark-mode .wave-separator path {
     }
 
     .hero-buttons {
-        justify-content: center;
         flex-direction: column;
-        width: 100%;
+        gap: 12px;
     }
 
     .hero-buttons .btn {
         width: 100%;
+        justify-content: center;
     }
 
-    /* Product Grid - 2 columns for mobile too as requested */
+    /* Product Grid - 2 per row */
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
 
     .product-card {
+        padding: 10px;
+    }
+
+    .product-image {
+        height: 170px;
         padding: 15px;
+        margin-bottom: 10px;
     }
 
     .product-info h3 {
         font-size: 16px;
     }
 
-    .product-price {
-        font-size: 18px;
-    }
-
-    /* About Section */
+    /* About Order Fix */
     .about-content {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-text {
+        order: 1; /* Description first */
     }
 
     .about-image {
-        height: 350px;
-        border-radius: 20px;
-        order: 2; /* Producer card second on mobile */
-    }
-    
-    .about-text {
-        order: 1; /* Text first on mobile */
+        order: 2; /* Producer card second */
+        height: auto;
+        aspect-ratio: 3 / 4;
     }
 
-    /* Features & Testimonials */
-    .features-grid,
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .about-heading {
+        font-size: 32px;
+        text-align: center;
     }
 
-    /* Contact Section */
+    .about-label {
+        display: block;
+        text-align: center;
+    }
+
+    /* Contact & Info Cards */
     .contact-content {
         grid-template-columns: 1fr;
         gap: 30px;
     }
 
-    /* Footer */
-    .footer-content {
-        grid-template-columns: 1fr;
+    .info-card {
+        flex-direction: column !important;
         text-align: center;
-        gap: 35px;
+        padding: 20px !important;
     }
 
-    .footer-social {
-        justify-content: center;
+    .info-card .btn {
+        margin-left: 0 !important;
+        width: 100% !important;
+        margin-top: 10px;
     }
-    
+
+    .info-icon {
+        margin: 0 auto;
+    }
+
+    /* Navbar Mobile */
     .logo-text {
-        font-size: 18px; /* Brand name visible and appropriately sized */
+        font-size: 18px;
         display: block !important;
+    }
+
+    .navbar-container {
+        padding: 0 15px;
+    }
+
+    /* General Spacing Normalize */
+    .products, .about, .features, .testimonials, .contact {
+        padding: 60px 0;
     }
 }
 
-/* Small Mobile Devices (max-width: 480px) */
+/* --- SMALL MOBILE DEVICES (max-width: 480px) --- */
 @media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
     .hero-title {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .hero-subtitle {
-        font-size: 15px;
+        font-size: 14px;
+        margin-bottom: 25px;
     }
 
-    /* Ensure 2 columns even on very small mobile */
     .products-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Enforcing 2 per row */
         gap: 10px;
     }
-    
+
     .product-card {
         padding: 10px;
     }
 
-    .navbar-logo .logo-text {
+    .product-info h3 {
         font-size: 14px;
-        display: block !important;
     }
 
-    .section-header h2 {
-        font-size: 24px;
+    .product-price {
+        font-size: 16px;
     }
 
     .about-stats {
@@ -1904,6 +1966,26 @@ body.dark-mode .wave-separator path {
 
     .stat-card {
         padding: 15px;
+    }
+
+    .navbar-logo img {
+        height: 60px;
+    }
+
+    .logo-text {
+        font-size: 14px;
+    }
+
+    /* Remove horizontal scroll completely */
+    * {
+        max-width: 100vw;
+    }
+}
+
+/* Print Overrides */
+@media print {
+    .navbar, .hero-scroll, .wave-separator, .hamburger, .dark-mode-toggle {
+        display: none;
     }
 }
 

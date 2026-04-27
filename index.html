@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Patil Exotic Vegetables - Premium farm fresh vegetables delivered daily to your doorstep in Mapusa, Goa">
+    <title>Patil Exotic Vegetables - Premium Farm Fresh Produce</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#home" class="navbar-logo">
+                <img src="logo.jpg" alt="Patil Exotic Vegetables" class="logo-img">
+                <span class="logo-text">Patil Exotic Vegetables</span>
+            </a>
+            
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="navbar-right">
+                <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-split">
+        <div class="container hero-container">
+            <div class="hero-text-content fade-in-up">
+                <h1 class="hero-title">
+                    Exotic Greens. Exceptional Quality. Delivered Daily.
+                </h1>
+                <p class="hero-subtitle">
+                    Directly from trusted farmers to your doorstep. Experience premium quality, handpicked freshness you can taste.
+                </p>
+                
+                <div class="hero-highlight-modern">
+                    <span><i class="fas fa-check-circle"></i> Handpicked Quality</span>
+                    <span><i class="fas fa-truck"></i> Free Home Delivery</span>
+                </div>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+                        <span>Shop Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-image-wrapper fade-in-up" style="animation-delay: 0.2s;">
+                <img src="hero-split.png" alt="Fresh exotic vegetables" class="hero-image">
+                <div class="hero-image-backdrop"></div>
+            </div>
+        </div>
+
+        <svg class="wave-separator" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="#ffffff"></path>
+        </svg>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2><i class="fas fa-leaf"></i> Our Premium Products</h2>
+                <p>Handpicked fresh vegetables delivered daily to your doorstep</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Zucchini -->
+                <div class="product-card fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="product-image">
+                        <img src="https://rukminim2.flixcart.com/image/180/240/xif0q/plant-seed/4/s/3/13-g-zucchini-gromax-india-original-imahgztqyvugmhvv.jpeg?q=90" alt="Zucchini">
+                        <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Zucchini</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Rich in vitamins & antioxidants</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹80<small>/kg</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Zucchini')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Broccoli -->
+                <div class="product-card fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnmsTqc4RhMDFWD3kmkwhJX-zzKAAx-mdnjw&s" alt="Broccoli">
+                        <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Broccoli</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Packed with calcium & iron</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹120<small>/kg</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Broccoli')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lettuce -->
+                <div class="product-card fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvtNk-_QONM2rMEDYH7m0GryECnHze2jyeyQ&s" alt="Lettuce">
+                        <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Lettuce</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Perfect for salads & wraps</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹60<small>/piece</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Lettuce')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bell Peppers -->
+                <div class="product-card fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="product-image">
+                        <img src="https://m.media-amazon.com/images/I/414iN1ruSHL._AC_UF1000,1000_QL80_.jpg" alt="Bell Peppers">
+                        <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bell Peppers</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Vibrant & nutrient-rich</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹100<small>/kg</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Bell Peppers')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cherry Tomatoes -->
+                <div class="product-card fade-in-up" style="animation-delay: 0.5s;">
+                    <div class="product-image">
+                        <img src="https://pasarsegar.co.id/wp-content/uploads/2020/10/Tomat20Cherry.jpg" alt="Cherry Tomatoes">
+                        <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Cherry Tomatoes</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Sweet & full of flavor</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹90<small>/kg</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Cherry Tomatoes')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baby Corn -->
+                <div class="product-card fade-in-up" style="animation-delay: 0.6s;">
+                    <div class="product-image">
+                        <img src="https://cdn.shopaccino.com/rootz/products/picture5-79076756268089_m.jpg?v=684" alt="Baby Corn">
+                        <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Baby Corn</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Tender & delicious</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹70<small>/pack</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Baby Corn')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Red Radish -->
+                <div class="product-card fade-in-up" style="animation-delay: 0.7s;">
+                    <div class="product-image">
+                        <img src="https://www.jiomart.com/images/product/original/590000135/red-radish-1-kg-product-images-o590000135-p590920895-0-202412250841.jpg?im=Resize=(1000,1000)" alt="Red Radish">
+                        <div class="product-badge">Premium</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Red Radish</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Crisp, peppery & farm-fresh</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹210<small>/kg</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Red Radish')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mushroom -->
+                <div class="product-card fade-in-up" style="animation-delay: 0.8s;">
+                    <div class="product-image">
+                        <img src="https://mushroomcouncil.org/wp-content/uploads/2019/11/Varieties-white-button.jpg" alt="Mushroom">
+                        <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Mushroom</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Fresh & earthy button mushrooms</p>
+                        <div class="product-footer">
+                                                        <span class="product-price">₹85<small>/pack</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Mushroom')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parsley -->
+                <div class="product-card fade-in-up" style="animation-delay: 0.9s;">
+                    <div class="product-image">
+                        <img src="https://cdn.dotpe.in/longtail/store-items/6233713/or4lrovN.jpeg" alt="Parsley">
+                        <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Parsley</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Fresh, aromatic curly parsley</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹45<small>/bunch</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Parsley')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in-up">
+                    <div class="about-label">Message from the Producer</div>
+                    <h2 class="about-heading">About Us</h2>
+                    <p>
+                        Welcome to Patil Exotic Vegetables, where freshness meets quality. Founded by <span class="highlight-keyword">Mahadev Patil</span>, our mission is to bring the finest, freshest vegetables directly from local farmers to your kitchen.
+                    </p>
+                    <p>
+                        We believe in <span class="highlight-keyword">direct sourcing</span> from trusted farmers across Goa and nearby regions. Every <span class="highlight-keyword">fresh vegetable</span> is handpicked at peak ripeness, ensuring maximum nutrition and flavor in every bite.
+                    </p>
+                    <p>
+                        Our commitment to quality, transparency, and customer satisfaction drives everything we do. We're not just selling vegetables – we're promoting a healthier lifestyle for Mapusa.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <h3 class="stat-number" data-target="500" data-suffix="+">0</h3>
+                            <p class="stat-label">Active Connections</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-number" data-target="100" data-suffix="%">0</h3>
+                            <p class="stat-label">Fresh Produce</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-number" data-target="50" data-suffix="+">0</h3>
+                            <p class="stat-label">Fresh Varieties</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image fade-in-up">
+                    <img src="profile.png" alt="Mahadev Patil - Producer">
+                    <div class="about-image-overlay">
+                        <span class="overlay-name">Mahadev Patil</span>
+                        <span class="highlight-producer">Producer</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline fade-in-up">
+                <div class="section-header">
+                    <h2><i class="fas fa-history"></i> Our Journey</h2>
+                </div>
+                <div class="timeline-items">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>2024 - The Beginning</h4>
+                            <p>Mahadev Patil started with a vision to provide fresh vegetables to Mapusa</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>2025 - Growing Strong</h4>
+                            <p>Expanded operations, built partnerships with local farmers</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>2026 - Going Premium</h4>
+                            <p>Launched online platform, introduced free home delivery service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <svg class="wave-separator" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="#f9f9f9"></path>
+        </svg>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2><i class="fas fa-star"></i> Why Choose Us?</h2>
+                <p>Experience the difference of premium, fresh produce</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Free Delivery</h3>
+                    <p>Free home delivery across Mapusa with every order</p>
+                    <div class="feature-accent"></div>
+                </div>
+
+                <div class="feature-card fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>100% Fresh</h3>
+                    <p>Fresh vegetables sourced directly from trusted farmers</p>
+                    <div class="feature-accent"></div>
+                </div>
+
+                <div class="feature-card fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Fair Pricing</h3>
+                    <p>Direct farmer partnerships ensure best prices</p>
+                    <div class="feature-accent"></div>
+                </div>
+
+                <div class="feature-card fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Sustainable, eco-friendly packaging for your health</p>
+                    <div class="feature-accent"></div>
+                </div>
+
+                <div class="feature-card fade-in-up" style="animation-delay: 0.5s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Daily Fresh</h3>
+                    <p>Fresh vegetables delivered every single day</p>
+                    <div class="feature-accent"></div>
+                </div>
+
+                <div class="feature-card fade-in-up" style="animation-delay: 0.6s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality Assured</h3>
+                    <p>Handpicked & quality-checked before delivery</p>
+                    <div class="feature-accent"></div>
+                </div>
+            </div>
+        </div>
+
+        <svg class="wave-separator" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,50 Q300,100 600,50 T1200,50 L1200,0 L0,0 Z" fill="#f5f5f5"></path>
+        </svg>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2><i class="fas fa-comments"></i> What Our Customers Say</h2>
+                <p>Real reviews from real customers</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The freshness and quality of vegetables from Patil Exotic Vegetables is outstanding! Every delivery has been perfect. Highly recommend!"
+                    </p>
+                    <h4 class="testimonial-author">Priya Sharma</h4>
+                    <p class="testimonial-role">Home Chef, Mapusa</p>
+                </div>
+
+                <div class="testimonial-card fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Finally found a reliable vegetable vendor with premium quality and fair prices. The free delivery is a game-changer. Love supporting local!"
+                    </p>
+                    <h4 class="testimonial-author">Rajesh Patel</h4>
+                    <p class="testimonial-role">Restaurant Owner, Mapusa</p>
+                </div>
+
+                <div class="testimonial-card fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Mahadev's vegetables taste like they came straight from the farm – because they did! Family is healthier and happier. This is real quality!"
+                    </p>
+                    <h4 class="testimonial-author">Anjali Desai</h4>
+                    <p class="testimonial-role">Health Enthusiast, Mapusa</p>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2><i class="fas fa-envelope"></i> Get In Touch</h2>
+                <p>Questions? We'd love to hear from you!</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-form fade-in-up">
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="info-card fade-in-up" style="animation-delay: 0.1s;">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Location</h4>
+                        <p>Mapusa, Goa, India</p>
+                    </div>
+
+                    <div class="info-card whatsapp-card fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h4>WhatsApp</h4>
+                        <p>9209146665</p>
+                        <a href="https://wa.me/919209146665" target="_blank" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Chat Now
+                        </a>
+                    </div>
+
+                    <div class="info-card fade-in-up" style="animation-delay: 0.3s;">
+                        <div class="info-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h4>Follow Us</h4>
+                        <p>@mahadevx4.0</p>
+                        <a href="https://instagram.com/mahadevx4.0" target="_blank" class="btn btn-instagram">
+                            <i class="fab fa-instagram"></i> Follow
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <svg class="wave-separator" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,50 Q300,100 600,50 T1200,50 L1200,0 L0,0 Z" fill="#092C24"></path>
+        </svg>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-leaf"></i> Patil Exotic Vegetables</h4>
+                    <p>Premium fresh vegetables delivered daily to your doorstep</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/919209146665" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/mahadevx4.0" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Products</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Free Home Delivery</li>
+                        <li><i class="fas fa-check-circle"></i> 100% Fresh Guarantee</li>
+                        <li><i class="fas fa-check-circle"></i> Fair Pricing</li>
+                        <li><i class="fas fa-check-circle"></i> Quality Assured</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Patil Exotic Vegetables | Designed with <i class="fas fa-heart"></i> by Mahadev Patil | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Patil Exotic Vegetables - Browse our premium selection of farm-fresh exotic vegetables delivered daily to Mapusa.">
+    <title>Our Products - Patil Exotic Vegetables</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="products-page">
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="navbar-container">
+            <a href="index.html#home" class="navbar-logo">
+                <img src="logo.jpg" alt="Patil Exotic Vegetables" class="logo-img">
+                <span class="logo-text">Patil Exotic Vegetables</span>
+            </a>
+            
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link active">Products</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="index.html#testimonials" class="nav-link">Reviews</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="navbar-right">
+                <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Page Header -->
+    <section class="products-hero">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Our Fresh Collection</h2>
+                <p>Directly from local farms to your kitchen. Explore our handpicked exotic vegetables.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-grid-section">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Zucchini -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="https://rukminim2.flixcart.com/image/180/240/xif0q/plant-seed/4/s/3/13-g-zucchini-gromax-india-original-imahgztqyvugmhvv.jpeg?q=90" alt="Zucchini">
+                                                <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Zucchini</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Rich in vitamins & antioxidants</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹80<small>/kg</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Zucchini')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Broccoli -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnmsTqc4RhMDFWD3kmkwhJX-zzKAAx-mdnjw&s" alt="Broccoli">
+                                                <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Broccoli</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Packed with calcium & iron</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹120<small>/kg</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Broccoli')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lettuce -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvtNk-_QONM2rMEDYH7m0GryECnHze2jyeyQ&s" alt="Lettuce">
+                        <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Lettuce</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Perfect for salads & wraps</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹60<small>/piece</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Lettuce')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bell Peppers -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="https://m.media-amazon.com/images/I/414iN1ruSHL._AC_UF1000,1000_QL80_.jpg" alt="Bell Peppers">
+                                                <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bell Peppers</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Vibrant & nutrient-rich</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹100<small>/kg</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Bell Peppers')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cherry Tomatoes -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="https://m.media-amazon.com/images/I/41KlsFidm2L._AC_UF1000,1000_QL80_.jpg" alt="Cherry Tomatoes">
+                        <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Cherry Tomatoes</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Sweet & full of flavor</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹90<small>/kg</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Cherry Tomatoes')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baby Corn -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="https://cdn.shopaccino.com/rootz/products/picture5-79076756268089_m.jpg?v=684" alt="Baby Corn">
+                        <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Baby Corn</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Tender & delicious</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹70<small>/pack</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Baby Corn')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Red Radish -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="https://www.jiomart.com/images/product/original/590000135/red-radish-1-kg-product-images-o590000135-p590920895-0-202412250841.jpg?im=Resize=(1000,1000)" alt="Red Radish">
+                        <div class="product-badge">Premium</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Red Radish</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Crisp, peppery & farm-fresh</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹210<small>/kg</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Red Radish')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mushroom -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="https://mushroomcouncil.org/wp-content/uploads/2019/11/Varieties-white-button.jpg" alt="Mushroom">
+                        <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Mushroom</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Fresh & earthy button mushrooms</p>
+                        <div class="product-footer">
+                                                        <span class="product-price">₹85<small>/pack</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Mushroom')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parsley -->
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="https://cdn.dotpe.in/longtail/store-items/6233713/or4lrovN.jpeg" alt="Parsley">
+                        <div class="product-badge">Exotic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Parsley</h3>
+                        <p class="product-benefit"><i class="fas fa-check-circle"></i> Fresh, aromatic curly parsley</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹45<small>/bunch</small></span>
+                            <button class="btn-add-cart" onclick="addToCart('Parsley')">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-leaf"></i> Patil Exotic Vegetables</h4>
+                    <p>Premium fresh vegetables delivered daily to your doorstep</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/919209146665" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/mahadevx4.0" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Patil Exotic Vegetables. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for Mahadev Patil</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast">Added to cart!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
